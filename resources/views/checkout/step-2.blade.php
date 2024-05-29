@@ -28,7 +28,7 @@
   <div id="app">
 
     <main class="container" id="checkout-guest-details">
-      <h1 class="fw-bold"> How to Install Bootstrap 5 in Laravel 10 - ItSolutionstuiff.com</h1>
+      <!-- <h1 class="fw-bold"> How to Install Bootstrap 5 in Laravel 10 - ItSolutionstuiff.com</h1> -->
 
 
       <div class="row d-flex justify-content-around g-5">
@@ -67,7 +67,7 @@
               <label for="address" class="form-label text-black fw-bold">Delivery Address*</label>
               <input type="text" class="form-control border-dark border-2 border-opacity-50" id="inputAddress" placeholder="Start Typing Address or Postcode">
             </div>
-            <div class="d-flex">
+            <div class="d-flex flex-column flex-md-row">
               <span class="me-3 d-block"><a href="#">Enter Address Manually</a></span>
               <span class="d-block">Billing Address is Selected at the Review stage.</span>
             </div>
@@ -102,7 +102,7 @@
 
           @include('checkout.partials.delivery-options',['options' => 'DPD (Tracked)'])
           <div class="col-12">
-            <p class="text-capitalize small text-primary fw-bold mb-4">Estimated Latest Delivery Date: <span class="text-muted">Wed 9th June, 9am - 9pm</span></p>
+            <p class="text-capitalize small text-primary fw-bold mb-4">Estimated Latest Delivery Date: <span class="text-muted smaller-font">Wed 9th June, 9am - 9pm</span></p>
           </div>
           <div class="col-12 mb-4">
             <button class="btn btn-primary text-uppercase w-100 h-100" type="button">proceed<i class="bi bi-chevron-right icon-100"></i></button>
@@ -117,19 +117,20 @@
             <p class="fw-bold">Safe & Secure Checkout. Your personal
               details are protected at all times.</p>
           </div>
+          <hr />
           <h6 class="fw-bold">Order Summary</h6>
           <section class="">
 
-            <div class="card card-stepper" style="border-radius: 16px;">
+            <div class="card card-stepper">
               <div class="card-body px-4">
                 <div class="d-flex flex-row mb-1 pb-2">
                   <div class="flex-fill">
-                    <img class="align-self-center img-fluid" src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/6.webp" width="200">
+                    <img class="align-self-start img-fluid" src="{{ asset('assets/pendle-shirt.png') }}" alt="product" width="84">
                   </div>
                   <div class="">
-                    <div class="d-flex justify-content-between">
-                      <h5 class="fs-6 text-capitalize">Genoa football shirt</h5>
-                      <h5 class="fs-6">$85.95</h5>
+                    <div class="d-flex align-self-start">
+                      <h5 class="small text-capitalize pe-3 fw-bold">Genoa football shirt</h5>
+                      <h5 class="small fw-bold">$85.95</h5>
                     </div>
                     <p class="text-muted text-capitalize small">Red/Black</p>
                     <p class="text-muted small">Size: XL</p>
@@ -155,7 +156,7 @@
               </div>
             </div>
           </section>
-          <div class="alert alert-warning mt-2" type="alert">
+          <div class="alert bg-yellow mt-2" type="alert">
             <span class="text-black fw-bold">Please note:</span> this order contains customisation.
             Payment <span class="text-black fw-bold">WILL NOT</span> be taken at this stage.
             Once the order has been placed, please ensure to
